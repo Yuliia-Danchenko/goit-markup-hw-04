@@ -108,7 +108,6 @@ p {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  padding-right: 50px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
@@ -162,19 +161,13 @@ p {
 
 .contacts-icon {
   fill: none;
-  stroke: var(--main-color);
+  fill: var(--main-color);
 }
 
 .contacts-link:hover .contacts-icon,
 .contacts-link:focus .contacts-icon {
-  stroke: var(--main-color-blue);
+  fill: var(--main-color-blue);
 }
-
-/* .contacts-icon:hover,
-.contacts-icon:focus {
-  fill: none;
-  stroke: var(--main-color-blue);
-} */
 
 /* Hero */
 
@@ -253,32 +246,14 @@ p {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
-.feature-list-item::before {
-  display: block;
-  content: "";
+.feature-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
-  background-size: 70px 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--main-bgc-comand);
   margin-bottom: 30px;
+  background-color: var(--main-bgc-comand);
   border-radius: 4px;
-}
-
-.antenna::before {
-  background-image: url(../images/features/antenna.svg);
-}
-
-.clock::before {
-  background-image: url(../images/features/clock.svg);
-}
-
-.pc::before {
-  background-image: url(../images/features/pc.svg);
-}
-
-.astronaut::before {
-  background-image: url(../images/features/astronaut.svg);
 }
 
 .feature-title {
@@ -370,6 +345,7 @@ img {
 
 .team-info {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Socials */
@@ -378,8 +354,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-
-  padding-bottom: 30px;
 }
 
 .socials-link {
@@ -478,7 +452,7 @@ img {
   margin: 0;
   padding: 0;
   justify-content: flex-start;
-  width: 270px;
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -526,12 +500,6 @@ img {
   color: var(--main-color-blue);
 }
 
-.footer-socials {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .footer-socials-title {
   margin-bottom: 20px;
   font-weight: bold;
@@ -542,6 +510,7 @@ img {
 
 .footer-socials-list {
   display: flex;
+  gap: 10px;
 }
 
 .footer-socials-item {
@@ -598,6 +567,7 @@ img {
 .main-list-item {
   border: transparent;
   border-radius: 4px;
+  padding: 6px 22px;
   color: var(--main-color-accent);
   background-color: var(--main-bgc-comand);
   font-weight: 500;
@@ -625,7 +595,8 @@ img {
   text-align: center;
 }
 
-.galery:hover {
+.galary-link:hover,
+.galary-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
